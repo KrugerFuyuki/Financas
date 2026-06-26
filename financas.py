@@ -14,6 +14,8 @@ def salvar_lancamentos(dados):
     with open(lancamentos_json, "w", encoding="utf-8") as f:
         json.dump(dados, f, ensure_ascii=False, indent=4)
 
+lancamentos_salvos = carregar_lancamentos()
+
 receitas = {}
 
 while True:
@@ -28,8 +30,20 @@ while True:
 
         opcao = input("escolha a operação que deseja prosseguir com:")
 
+        if opcao == "1":
 
+        elif opcao == "2":
 
+        elif opcao == "3":
+
+        elif opcao == "4":
+
+        elif opcao == "5":
+            print("Agradecemos pelo uso do nosso sistema, até!!")
+            break
+
+        else:
+            print("Opção inválida! Por favor, escolha um número de 1 a 5.")
 
     except Exception as e:
-        print(f"\nUm erro inesperado ocorreu")
+        print(f"\nUm erro inesperado aconteceu")
